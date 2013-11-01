@@ -17,11 +17,15 @@ build() {
 
 	cmake -DQT_QMAKE_EXECUTABLE=qmake4 .
 	make || return 1
+}
 
+package() {
+	install -D -m 644 cutecom.desktop ${pkgdir}/usr/share/applications/cutecom.desktop
+	cd ${srcdir}/${pkgname}-${pkgver}
 	install -D -m 755 cutecom ${pkgdir}/usr/bin/cutecom
 	install -D -m 644 cutecom.1 ${pkgdir}/usr/share/man/man1/cutecom.1
-	install -D -m 644 ../cutecom.desktop ${pkgdir}/usr/share/applications/cutecom.desktop
 }
+
 md5sums=('dd85ceecf5a60b4d9e4b21a338920561'
          'b34484d7c967819d54e469eeb07c8624')
 sha256sums=('1b6620a6159cf3d50bb36cce544e91486817df7f1d553bf239d6db6108dd2ea5'
