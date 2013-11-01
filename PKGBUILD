@@ -1,3 +1,6 @@
+# Maintainer: Siôn Le Roux <sinisterstuf@gmail.com>
+# Contributor: Alessandro Biavati <abiavati@gmail.com>
+
 pkgname=cutecom
 pkgver=0.22.0
 pkgrel=2
