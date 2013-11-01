@@ -19,7 +19,7 @@ build() {
 	make || return 1
 
 	install -D -m 755 cutecom ${pkgdir}/usr/bin/cutecom
-	install -D -m 644 cutecom.1 ${pkgdir}/usr/man/man1/cutecom.1
+	install -D -m 644 cutecom.1 ${pkgdir}/usr/share/man/man1/cutecom.1
 	install -D -m 644 ../cutecom.desktop ${pkgdir}/usr/share/applications/cutecom.desktop
 }
 md5sums=('dd85ceecf5a60b4d9e4b21a338920561'
